@@ -1,0 +1,37 @@
+{
+  "name": "jslama",
+  "version": "0.1.0",
+  "description": "JavaScript code generation tool that leverages Ollama's language models",
+  "main": "index.js",
+  "bin": {
+    "jslama": "./bin/jslama-cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "jslama",
+    "ollama",
+    "code-generation",
+    "javascript",
+    "ai",
+    "llm"
+  ],
+  "author": "Tom Sapletta <info@softreck.dev>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/py-lama/jslama"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "commander": "^9.4.0",
+    "dotenv": "^16.0.1",
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
