@@ -37,6 +37,63 @@ If you find this project useful, please consider supporting it:
 - [PayPal](https://www.paypal.me/softreck/10.00)
 - [Donate via Softreck](https://donate.softreck.dev)
 
+## Installation
+
+```bash
+npm install jslama
+```
+
+## Usage Example
+
+```js
+const JSLama = require('jslama');
+
+const prompt = 'Generate a function that adds two numbers.';
+JSLama.generate(prompt).then(code => {
+  console.log(code);
+});
+```
+
+## Testing
+
+To run tests for JSLama using the PyLama ecosystem:
+
+```bash
+cd ../../tests
+./run_all_tests.sh
+# or for a tolerant run
+./run_all_tests_tolerant.sh
+```
+
+Or, from the jslama directory:
+
+```bash
+make test
+```
+
+## Project Management
+
+Common Makefile commands:
+
+- `make install` – Install dependencies
+- `make lint` – Lint code
+- `make test` – Run tests
+- `make build` – Build project
+- `make clean` – Clean build/deps
+- `make format` – Format code
+- `make start` – Start project (if supported)
+
+## Example: Code Generation with JSLama
+
+```js
+const JSLama = require('jslama');
+
+JSLama.generate('Write a function to reverse a string.').then(code => {
+  console.log(code);
+  // Output: function reverseString(str) { return str.split('').reverse().join(''); }
+});
+```
+
 ---
 
 JSLama is a JavaScript code generation tool that leverages Ollama's language models. It is part of the PyLama ecosystem and integrates with LogLama as the primary service for centralized logging and environment management.
