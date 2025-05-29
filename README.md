@@ -2,6 +2,118 @@
 
 AI-powered development assistant that leverages Ollama's language models for code generation and assistance.
 
+## 🚧 Current Status: Under Development
+
+This project is currently under active development. Some features might not work as expected. Please report any issues you encounter.
+
+## 🚀 Quick Start
+
+1. Install the required dependencies:
+   ```bash
+   # Install Node.js (v14+)
+   curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+   sudo apt-get install -y nodejs
+
+   # Install Ollama
+   curl -fsSL https://ollama.com/install.sh | sh
+
+   # Install DevLama globally
+   npm install -g devlama
+   ```
+
+2. Start the required services:
+   ```bash
+   # Start Ollama service
+   ollama serve &
+   
+   # Start getllm API (if using local models)
+   # Make sure to install getllm first: pip install getllm
+   getllm serve
+   ```
+
+3. Test the installation:
+   ```bash
+   devlama --version
+   ```
+
+## 🛠️ TODO List
+
+### High Priority
+- [ ] Fix CLI command execution
+- [ ] Implement proper error handling for Ollama API calls
+- [ ] Add connection test to getllm API
+- [ ] Create proper configuration system
+- [ ] Add proper logging
+
+### Medium Priority
+- [ ] Add support for different programming languages
+- [ ] Implement context-aware code generation
+- [ ] Add tests for all major components
+- [ ] Create documentation website
+- [ ] Add CI/CD pipeline
+
+### Low Priority
+- [ ] Add plugin system
+- [ ] Implement code review functionality
+- [ ] Add support for custom templates
+- [ ] Create VS Code extension
+
+## 🗺️ Roadmap
+
+### v0.2.0 - Core Functionality (Current)
+- [x] Basic CLI interface
+- [x] Integration with Ollama
+- [x] Simple code generation
+- [ ] Connection to getllm API
+- [ ] Basic error handling
+
+### v0.3.0 - Enhanced Features
+- [ ] Configuration system
+- [ ] Improved error messages
+- [ ] Better documentation
+- [ ] Basic testing
+
+### v0.4.0 - Developer Experience
+- [ ] VS Code extension
+- [ ] Plugin system
+- [ ] Template support
+- [ ] Improved logging
+
+### v1.0.0 - Stable Release
+- [ ] Full test coverage
+- [ ] Comprehensive documentation
+- [ ] Performance optimizations
+- [ ] Community guidelines
+
+## 🔌 Integration with getllm
+
+To use DevLama with getllm, make sure the getllm API is running:
+
+```bash
+# Install getllm if not already installed
+pip install getllm
+
+# Start the getllm API server
+getllm serve
+
+# In another terminal, you can test the connection
+curl http://localhost:8000/health
+```
+
+## 🐛 Known Issues
+
+- Connection to getllm API might fail if the service is not running
+- Some commands might not work as expected in the current version
+- Limited error handling in the current implementation
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to get started.
+
+## 📄 License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
+
 [![npm version](https://img.shields.io/npm/v/devlama.svg)](https://www.npmjs.com/package/devlama)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
