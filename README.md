@@ -1,16 +1,21 @@
-# JSLama
+# DevLama (formerly JSLama)
+
+AI-powered development assistant that leverages Ollama's language models for code generation and assistance.
+
+[![npm version](https://img.shields.io/npm/v/devlama.svg)](https://www.npmjs.com/package/devlama)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
 
 ## PyLama Ecosystem Navigation
 
 | Project | Description | Links |
 |---------|-------------|-------|
-| **JSLama** | JavaScript code generation | [GitHub](https://github.com/py-lama/jslama) · [NPM](https://www.npmjs.com/package/jslama) · [Docs](https://py-lama.github.io/jslama/) |
+| **DevLama** | AI-powered development assistant | [GitHub](https://github.com/py-lama/devlama) · [NPM](https://www.npmjs.com/package/devlama) · [Docs](https://py-lama.github.io/devlama/) |
 | **GetLLM** | LLM model management and code generation | [GitHub](https://github.com/py-lama/getllm) · [PyPI](https://pypi.org/project/getllm/) · [Docs](https://py-lama.github.io/getllm/) |
-| **DevLama** | Python code generation with Ollama | [GitHub](https://github.com/py-lama/devlama) · [Docs](https://py-lama.github.io/devlama/) |
 | **LogLama** | Centralized logging and environment management | [GitHub](https://github.com/py-lama/loglama) · [PyPI](https://pypi.org/project/loglama/) · [Docs](https://py-lama.github.io/loglama/) |
 | **APILama** | API service for code generation | [GitHub](https://github.com/py-lama/apilama) · [Docs](https://py-lama.github.io/apilama/) |
-| **BEXY** | Sandbox for executing generated code | [GitHub](https://github.com/py-lama/bexy) · [Docs](https://py-lama.github.io/bexy/) |
-| **JSBox** | JavaScript sandbox for executing code | [GitHub](https://github.com/py-lama/jsbox) · [NPM](https://www.npmjs.com/package/jsbox) · [Docs](https://py-lama.github.io/jsbox/) |
+| **BEXY** | Sandbox for executing generated code | [GitHub](https://github.com/py-lama/bexy) · [NPM](https://www.npmjs.com/package/bexy) · [Docs](https://py-lama.github.io/bexy/) |
+| **JSLama** | JavaScript code generation | [GitHub](https://github.com/py-lama/jslama) · [NPM](https://www.npmjs.com/package/jslama) · [Docs](https://py-lama.github.io/jslama/) |
 | **SheLLama** | Shell command generation | [GitHub](https://github.com/py-lama/shellama) · [PyPI](https://pypi.org/project/shellama/) · [Docs](https://py-lama.github.io/shellama/) |
 | **WebLama** | Web application generation | [GitHub](https://github.com/py-lama/weblama) · [Docs](https://py-lama.github.io/weblama/) |
 
@@ -40,15 +45,52 @@ If you find this project useful, please consider supporting it:
 ## Installation
 
 ```bash
-npm install jslama
+npm install -g devlama  # For global CLI usage
+# or
+yarn global add devlama
 ```
 
-## Usage Example
+## Quick Start
 
-```js
-const JSLama = require('jslama');
+### Command Line Usage
 
-const prompt = 'Generate a function that adds two numbers.';
+```bash
+# Initialize a new project
+devlama init my-project
+
+# Generate code from a prompt
+devlama generate "Create a React component that displays a counter"
+
+# Start interactive mode
+devlama
+
+# Show version
+devlama --version
+```
+
+### Programmatic Usage
+
+```javascript
+const { DevLama } = require('devlama');
+
+const devlama = new DevLama({
+  model: 'codellama',  // Default model
+  temperature: 0.7,
+});
+
+// Generate code from a prompt
+const code = await devlama.generateCode('Create a function that sorts an array of objects by a property');
+console.log(code);
+```
+
+## Features
+
+- AI-powered code generation and assistance
+- Support for multiple programming languages
+- Integration with Ollama's language models
+- Interactive REPL for development
+- Configurable model parameters
+- Project scaffolding and management
 JSLama.generate(prompt).then(code => {
   console.log(code);
 });

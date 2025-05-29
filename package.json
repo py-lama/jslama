@@ -1,23 +1,31 @@
 {
-  "name": "jslama",
+  "name": "devlama",
   "version": "0.1.0",
-  "description": "JavaScript code generation tool that leverages Ollama's language models",
+  "description": "AI-powered development assistant that leverages Ollama's language models for code generation and assistance",
   "main": "index.js",
   "bin": {
-    "jslama": "./bin/jslama-cli.js"
+    "devlama": "./bin/devlama-cli.js"
   },
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node index.js",
+    "prepublishOnly": "npm test",
+    "build": "echo 'No build step required'"
   },
   "keywords": [
-    "jslama",
+    "devlama",
     "ollama",
     "code-generation",
-    "javascript",
-    "ai",
-    "llm"
+    "ai-assistant",
+    "developer-tools",
+    "llm",
+    "productivity",
+    "automation"
   ],
+  "homepage": "https://github.com/py-lama/devlama#readme",
+  "bugs": {
+    "url": "https://github.com/py-lama/devlama/issues"
+  },
   "author": "Tom Sapletta <info@softreck.dev>",
   "license": "Apache-2.0",
   "repository": {
