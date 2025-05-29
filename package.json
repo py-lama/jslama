@@ -1,6 +1,6 @@
 {
   "name": "devlama",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AI-powered development assistant that leverages Ollama's language models for code generation and assistance",
   "main": "index.js",
   "bin": {
